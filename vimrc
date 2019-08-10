@@ -61,3 +61,15 @@ nnoremap <C-H> <C-W><C-H>
 " Easier line wrap navigation
 nnoremap j gj
 nnoremap k gk
+
+" Have files autoreload
+set autoread
+
+
+" Plugins
+call plug#begin('~/.vim/vimplugins')
+
+Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete', }
+Plug 'tpope/vim-surround'
+
+call plug#end()
