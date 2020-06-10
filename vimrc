@@ -16,6 +16,7 @@ syntax on " Syntax highlighting
 
 " Fuzzy finding
 set path+=**
+set wildignore+=**/node_modules/**
 set wildmenu
 
 " make ctags
@@ -65,11 +66,18 @@ nnoremap k gk
 " Have files autoreload
 set autoread
 
+" NERDTree settings
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Plugins
 call plug#begin('~/.vim/vimplugins')
 
 Plug 'fsharp/vim-fsharp', { 'for': 'fsharp', 'do': 'make fsautocomplete', }
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
